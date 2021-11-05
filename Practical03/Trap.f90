@@ -1,3 +1,4 @@
+! To compile: gfortran -o trap Trap.f90
 program Trap
     implicit none
     

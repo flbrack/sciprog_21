@@ -1,3 +1,4 @@
+! To compile: gfortran -o conversion Conversion.f90
 program conversion
 ! Declare variables 
    integer (kind=4) :: i,inum,tmp,numdigits

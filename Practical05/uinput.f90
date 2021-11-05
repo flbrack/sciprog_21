@@ -1,3 +1,4 @@
+! To compile: gfortran -o uinput uinput.f90
 program uinput
     implicit none
 

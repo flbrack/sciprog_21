@@ -1,3 +1,5 @@
+! To compile: gfortran -o trap_v3 Trap_v3.f90
+
 ! module for constant variables
 module consts
     integer(kind=4), parameter :: N=12

@@ -1,3 +1,4 @@
+! To compile: gfortran -o use_write use_write.f90
 program use_write
     implicit none
     

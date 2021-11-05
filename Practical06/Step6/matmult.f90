@@ -1,3 +1,5 @@
+! matrix multiplication function used in main.f90
+! To compile main.f90: make
 function matmult(n,p,q,a,b) result(c)
     integer (kind=4) :: i, j, k
     integer (kind=4), intent(in) :: n, p, q

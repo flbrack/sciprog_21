@@ -1,3 +1,4 @@
+! To compile: gfortran -o invhypo invhypo.f90
 module hyp
     contains
     ! calculate the arctanh at real point x with 

@@ -1,3 +1,4 @@
+! To compile: gfortran -o polynomial polynomial.f90
 function factorial(n) result(fact)
     integer, intent(in) :: n
 

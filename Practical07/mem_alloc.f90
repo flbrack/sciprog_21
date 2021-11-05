@@ -1,3 +1,4 @@
+! To compile: gfortran -o mem_alloc mem_alloc.f90
 module subs
     contains
         ! Allocates an array of size n to a pointer to the array

@@ -1,3 +1,4 @@
+! To compile: gfortran -o matrixmult matrixmult.f90
 program matrixmult
     implicit none
     integer (kind=4), parameter :: n=5, p=3, q=4

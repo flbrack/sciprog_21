@@ -1,3 +1,4 @@
+! To compile: make
 module functions
     interface
        function matmult(n,p,q,a,b) result(c)

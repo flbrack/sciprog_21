@@ -1,4 +1,4 @@
-
+! To compile: gfortran -o sum Sum.f90
 program sum
 ! Declare variables
    integer (kind=4) :: i

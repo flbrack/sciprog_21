@@ -1,3 +1,4 @@
+! To compile: gfortran -o fib fib.f90
 module fib
     contains
     subroutine fibo(pa,pb)
