@@ -23,7 +23,7 @@ program conversion
       i = i+1
    end do
 
-! TODO Complete the expression
+! The below fomrula gives us the number of digits in a decimal number
    numdigits = nint( log(fnum)/log(2.0) ) 
    write(6,*) ' The number of digits is ',numdigits
 
