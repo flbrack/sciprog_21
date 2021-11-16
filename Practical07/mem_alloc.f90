@@ -59,6 +59,7 @@ program mem_alloc
     write(6,*) ' Enter the number: '
     read(5,*) n
 
+! We call each of the subroutines
     call allocatearray(main_p,n)
     call fillwithones(main_p,n)
     call printarray(main_p,n)
