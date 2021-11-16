@@ -1,6 +1,7 @@
 ! To compile: gfortran -o fib fib.f90
 module fib
     contains
+    ! subroutine that calculates the fibonacci numbers
     subroutine fibo(pa,pb)
         integer (kind=8), pointer :: pa, pb
 
@@ -25,9 +26,11 @@ program fibonacci
     integer (kind=8), target :: n1=0, n2=1
     pn1 => n1
     pn2 => n2
+
     ! Get user to enter a number
     write(6,*) 'Enter a positive integer'
     read(5,*) n
+
     ! Check the number is positive, terminate if not
     if (n < 1) then
         write(6,*) 'The number is not positive'
@@ -36,6 +39,7 @@ program fibonacci
     write(6,*) 'The fibonacci sequence is : '
     write(6,'(i0,a)', advance='NO'), n2,', '
 
+    ! We call the subroutine that calculates fibonacci numbers
     do i=2,n-1
         call fibo(pn1,pn2) ! get next #
 

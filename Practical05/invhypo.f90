@@ -37,17 +37,21 @@ program invhypo
     integer(kind=4) :: i, sample, a
     real(kind=8) :: start, finish, prec, j !sample, tan1, tan2, sample
     real, allocatable :: tan1(:), tan2(:)
+
     ! Reading real x, to compute arctanh(x)
     write(6,*) 'Enter the real in the range [-1, 1]: '
     read(5,*) start, finish
+
     ! Reading the precision to be applied to the numerical method
     write(6,*) 'Enter the method''s precision: '
     read(5,*) prec
-    ! SEt a variable a to the size of the array to store the values
+
+    ! Set a variable a to the size of the array to store the values
     a = ((abs(start) + abs(finish))/prec) + 1
     j = start
     allocate(tan1(a))
     allocate(tan2(a))
+
     ! Caluclate arctanh(x) using 2 different methods
     do i=1,a
         tan1(i) = arctanh(j, prec)
