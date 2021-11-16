@@ -45,6 +45,7 @@ program Trap_v2
 end program Trap_v2
 
 subroutine degtorad(deg, rad)
+    ! Convert degrees to radians
     use consts
     real(kind=4), intent(in) :: deg
     real(kind=4), intent(out) :: rad
@@ -52,11 +53,13 @@ subroutine degtorad(deg, rad)
 end subroutine degtorad
 
 subroutine traprule(TanArr, area)
+    ! Now we have extracted the trapezoidal rule into a subroutine
     use consts
     real(kind=4), intent(in) :: TanArr(N+1)
     real(kind=4), intent(out) :: area
     real(kind=4) :: mult_rad
 
+! calculate area from array
     area = TanArr(1) + TanArr(N+1)
     do i=2,N, 1
         area = area + 2.0*TanArr(i)

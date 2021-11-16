@@ -52,6 +52,7 @@ program Trap_v2
 end program Trap_v2
 
 subroutine degtorad(deg, rad)
+    ! converts degrees to radians
     use consts
     real(kind=4), intent(in) :: deg
     real(kind=4), intent(out) :: rad
