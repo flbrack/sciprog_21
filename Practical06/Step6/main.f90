@@ -30,6 +30,7 @@ program matrixmult
     end do
     c = 0.0
 
+    ! Call the function that multiplies the matrices
     c = matmult(n,p,q,a,b)
 
     ! Print out matrices
