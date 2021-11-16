@@ -8,6 +8,7 @@ program magsq
     integer (kind=4), allocatable :: magicSquare(:,:)
     character (len=6) :: text
 
+    ! Get user input for size of magic square
     n = 0
     do while (n <= 0)
         write(6,*) 'Enter the square side:'
@@ -25,11 +26,13 @@ program magsq
         read(5,*) magicSquare(i,:)
     enddo
 
+    ! Check is square magic using header function
     if (isMagicSquare(magicSquare,n)) then
         text = 'is'
     else
         text = 'is not'
     endif
+    ! Write result to output
     write(6,*) 'This square ', trim(text), ' magic.'
 
     ! Freeing each row separately before freeing the array of pointers

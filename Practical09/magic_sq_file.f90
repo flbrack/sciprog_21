@@ -1,4 +1,6 @@
 ! To compile: gfortran -o magic_sq_file magic_sq_file.f90
+
+! include the header file so we can use function to check if square if magic
 include 'magic_square.fh'
 
 program magsq
@@ -19,6 +21,7 @@ program magsq
     ierr = 0
     open(unit=1,file=filename,form='FORMATTED',access='SEQUENTIAL',action='READ',status='OLD',iostat=ierr)
 
+    ! If file cannot be opened print warning and go to end of program
     if (ierr /= 0) then
         write(6,*) 'Sorry cannot find file ', filename
         goto 20
@@ -26,6 +29,7 @@ program magsq
 
     ! First line has n
 
+! Calculate the lines so that we know size of square
     n = 0
     do while(ierr==0)
         read(1,*,iostat=ierr) line
@@ -35,6 +39,7 @@ program magsq
     write(6,*) 'n = ',n
     rewind(unit=1)
 
+    ! If file is empty go to end of program
     if (n <= 0) goto 10
 
     ! Allocating a matrix for storing the magic square
@@ -53,11 +58,13 @@ program magsq
         goto 10
     endif
 
+    ! Check is square magic using function from header file
     if (isMagicSquare(magicSquare,n)) then
         text = 'is'
     else
         text = 'is NOT'
     endif
+    ! write to output result
     write(6,*) 'This square ', trim(text), ' magic'
 
     !Freeing each row separately before freeing the array of pointers
